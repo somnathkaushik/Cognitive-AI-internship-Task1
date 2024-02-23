@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Adding Logo to web page  -->
+<link rel="icon" href="https://media.licdn.com/dms/image/D560BAQEuRd4SnzlQ7w/company-logo_200_200/0/1696241118650?e=1717027200&v=beta&t=5kStiy-RXTLmogVNo_Cgjdfcsh56w_tXNcQUTFJchS8">
+<title>Coginative AI Dashboard</title>
+
+<!-- Include Tailwind CSS -->
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100">
+
+<!-- Navbar -->
+<nav class="bg-black p-4">
+  <div class="flex justify-between items-center">
+
+    <!-- Logo -->
+    <div class="flex items-center">
+      <img src="https://media.licdn.com/dms/image/D563DAQH259RwsH7S8Q/image-scale_191_1128/0/1696241430818/coginitive_ai_cover?e=1709294400&v=beta&t=YU9gQ4m550ULzwEX8W8KFPcyjF9ESMdHA5qBcUgfkhc" alt="Logo" class="h-8 w-20 mr-2">
+      <div class="text-white font-bold ">Dashboard</div>
+    </div>
+    
+    <!-- Hamburger Icon -->
+    <div id="toggleMenu" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+    <!-- Navbar Links -->
+    <div class="hidden lg:flex">
+      <a href="#" class="text-white px-4">Home</a>
+      <a href="#" class="text-white px-4">About</a>
+      <a href="#" class="text-white px-4">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Responsive Navbar Menu (Hidden by default) -->
+<div id="responsiveMenu" class="hidden lg:hidden bg-gray-600">
+  <a href="#" class="block text-white px-4 py-2">Home</a>
+  <a href="#" class="block text-white px-4 py-2">About</a>
+  <a href="#" class="block text-white px-4 py-2">Contact</a>
+</div>
+
+<!-- Main Content -->
+<div id="dashboard" class="flex justify-center items-center h-screen">
+  <!-- Add Button -->
+  <button class="button bg-blue-500 hover:bg-blue-700 text-white" onclick="showFunctionality('Add')">Add</button>
+  
+  <!-- Edit Button -->
+  <button class="button bg-green-500 hover:bg-green-700 text-white" onclick="showFunctionality('Edit')">Edit</button>
+  
+  <!-- Update Button -->
+  <button class="button bg-yellow-500 hover:bg-yellow-700 text-white" onclick="showFunctionality('Update')">Update</button>
+  
+  <!-- Delete Button -->
+  <button class="button bg-red-500 hover:bg-red-700 text-white" onclick="showFunctionality('Delete')">Delete</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
