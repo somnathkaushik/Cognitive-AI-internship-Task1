@@ -1,69 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Adding Logo to web page  -->
-<link rel="icon" href="https://media.licdn.com/dms/image/D560BAQEuRd4SnzlQ7w/company-logo_200_200/0/1696241118650?e=1717027200&v=beta&t=5kStiy-RXTLmogVNo_Cgjdfcsh56w_tXNcQUTFJchS8">
-<title>Coginative AI Dashboard</title>
+  <!-- Adding Logo to web page  -->
+  <link rel="icon"
+    href="https://media.licdn.com/dms/image/D560BAQEuRd4SnzlQ7w/company-logo_200_200/0/1696241118650?e=1717027200&v=beta&t=5kStiy-RXTLmogVNo_Cgjdfcsh56w_tXNcQUTFJchS8">
+  <title>Coginative AI Dashboard</title>
 
-<!-- Include Tailwind CSS -->
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <!-- Include Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="bg-gray-100">
 
-<!-- Navbar -->
-<nav class="bg-black p-4">
-  <div class="flex justify-between items-center">
+  <!-- Navbar -->
+  <nav class="bg-black p-4">
+    <div class="flex justify-between items-center">
 
-    <!-- Logo -->
-    <div class="flex items-center">
-      <img src="https://media.licdn.com/dms/image/D563DAQH259RwsH7S8Q/image-scale_191_1128/0/1696241430818/coginitive_ai_cover?e=1709294400&v=beta&t=YU9gQ4m550ULzwEX8W8KFPcyjF9ESMdHA5qBcUgfkhc" alt="Logo" class="h-8 w-20 mr-2">
-      <div class="text-white font-bold ">Dashboard</div>
+      <!-- Logo -->
+      <div class="flex items-center">
+        <img
+          src="https://media.licdn.com/dms/image/D563DAQH259RwsH7S8Q/image-scale_191_1128/0/1696241430818/coginitive_ai_cover?e=1709294400&v=beta&t=YU9gQ4m550ULzwEX8W8KFPcyjF9ESMdHA5qBcUgfkhc"
+          alt="Logo" class="h-8 w-20 mr-2">
+        <div class="text-white font-bold ">Dashboard</div>
+      </div>
+
+      <!-- Hamburger Icon -->
+      <div id="toggleMenu" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Navbar Links -->
+      <div class="hidden lg:flex">
+        <a href="#" class="text-white px-4">Home</a>
+        <a href="#" class="text-white px-4">About</a>
+        <a href="#" class="text-white px-4">Contact</a>
+      </div>
     </div>
-    
-    <!-- Hamburger Icon -->
-    <div id="toggleMenu" class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    
-    <!-- Navbar Links -->
-    <div class="hidden lg:flex">
-      <a href="#" class="text-white px-4">Home</a>
-      <a href="#" class="text-white px-4">About</a>
-      <a href="#" class="text-white px-4">Contact</a>
+  </nav>
+
+  <!-- Responsive Navbar Menu (Hidden by default) -->
+  <div id="responsiveMenu" class="hidden lg:hidden bg-gray-600">
+    <a href="#" class="block text-white px-4 py-2">Home</a>
+    <a href="#" class="block text-white px-4 py-2">About</a>
+    <a href="#" class="block text-white px-4 py-2">Contact</a>
+  </div>
+
+  <!-- Card -->
+  <div id="cardContainer" class="p-4 flex flex-wrap">
+    <!-- Card -->
+    <div class="card grow ">
+      <img
+        src="https://media.licdn.com/dms/image/D560BAQEuRd4SnzlQ7w/company-logo_200_200/0/1696241118650?e=1717027200&v=beta&t=5kStiy-RXTLmogVNo_Cgjdfcsh56w_tXNcQUTFJchS8"
+        alt="Profile Image">
+      <div class="text-lg font-bold">Coginitive AI</div>
+      <div class="text-sm text-gray-500 text-wrap">Coginitive AI is a leading provider of AI-powered solutions for
+        businesses. Our mission is to revolutionise the way businesses operate by leveraging the latest
+        advancements in Artificial Intelligence. We help businesses automate their processes, optimize their
+        operations, and achieve unprecedented levels of efficiency and productivity.
+        We provide expert advice on how AI can be leveraged in a business, identifying areas for automation, and
+        devising a strategic roadmap for Digital Transformation and AI adoption.We Design and deploy AI-driven
+        Interactive chatbots for customer support, sales, and other interactive tasks. We analyse your data to
+        provide actionable insights and predictive analytics in minutes.We automate repetitive tasks, enhance
+        marketing strategies, Branding from customer segmentation to campaign optimisation, Copywriting and
+        freeing up your team to focus on strategic initiatives.</div>
+        
     </div>
   </div>
-</nav>
 
-<!-- Responsive Navbar Menu (Hidden by default) -->
-<div id="responsiveMenu" class="hidden lg:hidden bg-gray-600">
-  <a href="#" class="block text-white px-4 py-2">Home</a>
-  <a href="#" class="block text-white px-4 py-2">About</a>
-  <a href="#" class="block text-white px-4 py-2">Contact</a>
-</div>
+  <!-- Main Content -->
+  <div class="flex justify-center items-center">
+    <!-- Add Button -->
+    <button class="button bg-blue-500 hover:bg-blue-700 text-white" onclick="addCard()">Add</button>
 
-<!-- Main Content -->
-<div id="dashboard" class="flex justify-center items-center h-screen">
-  <!-- Add Button -->
-  <button class="button bg-blue-500 hover:bg-blue-700 text-white" onclick="showFunctionality('Add')">Add</button>
-  
-  <!-- Edit Button -->
-  <button class="button bg-green-500 hover:bg-green-700 text-white" onclick="showFunctionality('Edit')">Edit</button>
-  
-  <!-- Update Button -->
-  <button class="button bg-yellow-500 hover:bg-yellow-700 text-white" onclick="showFunctionality('Update')">Update</button>
-  
-  <!-- Delete Button -->
-  <button class="button bg-red-500 hover:bg-red-700 text-white" onclick="showFunctionality('Delete')">Delete</button>
-</div>
+    <!-- Edit Button -->
+    <button class="button bg-green-500 hover:bg-green-700 text-white" onclick="editCard()">Edit</button>
 
-<script src="script.js"></script>
+    <!-- Update Button -->
+    <button class="button bg-yellow-500 hover:bg-yellow-700 text-white" onclick="updateCard()">Update</button>
+
+    <!-- Delete Button -->
+    <button class="button bg-red-500 hover:bg-red-700 text-white" onclick="deleteCard()">Delete</button>
+  </div>
+
+  <script src="script.js"></script>
 
 </body>
+
 </html>
